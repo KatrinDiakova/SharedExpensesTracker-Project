@@ -1,17 +1,18 @@
 package splitter;
 
 
-import java.util.*;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
-    private static Scanner sc = new Scanner(System.in);
+    private static final Scanner SCANNER = new Scanner(System.in);
+    private static final CommandParser PARSER = new CommandParser();
 
     public static void main(String[] args) {
-        while (true) {
-            String input = sc.nextLine();
-            List<String> inputList = Arrays.asList(input.split(" "));
-            CommandParser.parseUserInput(inputList);
+        boolean needExit = false;
+        while (!needExit) {
+            needExit = PARSER.parseUserInput(SCANNER.nextLine());
         }
     }
 }
