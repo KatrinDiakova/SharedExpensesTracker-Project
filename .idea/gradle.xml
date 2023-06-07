@@ -8,17 +8,23 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="jbr-17" />
+        <option name="gradleJvm" value="#JAVA_INTERNAL" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Shared Expenses Tracker/task" />
-            <option value="$PROJECT_DIR$/Shared Expenses Tracker/task/build/classes/java" />
-            <option value="$PROJECT_DIR$/Shared Expenses Tracker/task/build/generated/sources/annotationProcessor/java" />
-            <option value="$PROJECT_DIR$/Shared Expenses Tracker/task/build/generated/sources/headers/java" />
-            <option value="$PROJECT_DIR$/Shared Expenses Tracker/task/build/reports/tests" />
-            <option value="$PROJECT_DIR$/Shared Expenses Tracker/task/build/test-results" />
-            <option value="$PROJECT_DIR$/Shared Expenses Tracker/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Shared Expenses Tracker/task/out" />
+            <option value="$PROJECT_DIR$/Topics/Printing data/Digits from 0 to 9 backwards" />
+            <option value="$PROJECT_DIR$/Topics/Printing data/First, second, third" />
+            <option value="$PROJECT_DIR$/Topics/Printing data/From 0 to 4" />
+            <option value="$PROJECT_DIR$/Topics/Printing data/Jamais vu" />
+            <option value="$PROJECT_DIR$/Topics/Printing data/Printing a magic letter" />
+            <option value="$PROJECT_DIR$/Topics/Printing data/Stars" />
+            <option value="$PROJECT_DIR$/Topics/Printing data/Strong protection" />
+            <option value="$PROJECT_DIR$/Topics/Printing data/The result of a Tic-Tac-Toe game" />
+            <option value="$PROJECT_DIR$/Topics/Printing data/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Printing data/We need to learn Java" />
+            <option value="$PROJECT_DIR$/Topics/Printing data/What does the code print" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>

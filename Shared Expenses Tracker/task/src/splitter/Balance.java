@@ -1,6 +1,5 @@
 package splitter;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+import java.math.*;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -8,6 +7,7 @@ public class Balance {
 
     private static String type = "close";
 
+    // длинный список аргументов, переместить списки в отдельные классы
     public void parceData(List<String> input, Map<String, BigDecimal> balanceAmount, Map<String, ArrayList<BalanceHistory>> balanceHistory) {
         Date.index = 0;
         LocalDate date = Date.getDate(input);
@@ -19,6 +19,7 @@ public class Balance {
         processBalance(date, balanceAmount, balanceHistory);
     }
 
+    // слишком много агругемнов в методе, изменить!!!
     private static void processBalance(LocalDate inputDate, Map<String, BigDecimal> balanceAmount, Map<String, ArrayList<BalanceHistory>> balanceHistory) {
         try {
             List<String> repayment = new ArrayList<>();

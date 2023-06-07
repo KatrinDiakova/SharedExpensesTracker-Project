@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 public class BalanceHistory {
     private LocalDate date;
+    // изменить имя
     private BigDecimal balance;
 
 

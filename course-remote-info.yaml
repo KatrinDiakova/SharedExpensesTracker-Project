@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/452671/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Fri, 12 May 2023 16:55:27 UTC"
+update_date: "Wed, 07 Jun 2023 15:43:25 UTC"
 stages:
 - id: 765
   step: 11718
@@ -25,28 +25,38 @@ stages:
   is_completed: false
 topics:
   0:
-  - title: "Write, compile, and run"
-    theory_id: 3739
-  - title: "JVM, JRE, and JDK"
-    theory_id: 3499
-  - title: Units of information
-    theory_id: 6865
-  - title: Introduction to Operating systems
-    theory_id: 9704
-  - title: Command line overview
-    theory_id: 8977
-  - title: Parameters and Options
-    theory_id: 9746
   - title: Computer algorithms
     theory_id: 16547
-  - title: Immutability
-    theory_id: 7929
   - title: The big O notation
     theory_id: 16699
   - title: "Best, average and worst cases"
     theory_id: 20084
   - title: Data structures
     theory_id: 16927
+  - title: Units of information
+    theory_id: 6865
+  - title: "Write, compile, and run"
+    theory_id: 3739
+  - title: "JVM, JRE, and JDK"
+    theory_id: 3499
+  - title: Introduction to Operating systems
+    theory_id: 9704
+  - title: Command line overview
+    theory_id: 8977
+  - title: Parameters and Options
+    theory_id: 9746
+  - title: Pseudocode
+    theory_id: 15090
+  - title: Pseudocode basics
+    theory_id: 19510
+  - title: Complex constructions in pseudocode
+    theory_id: 20922
+  - title: Immutability
+    theory_id: 7929
+  - title: Fixed-size array
+    theory_id: 20078
+  - title: Dynamic array
+    theory_id: 5357
   - title: Files
     theory_id: 13025
   - title: Computer programming
@@ -145,16 +155,6 @@ topics:
     theory_id: 5077
   - title: Building apps using Gradle
     theory_id: 7917
-  - title: Pseudocode
-    theory_id: 15090
-  - title: Pseudocode basics
-    theory_id: 19510
-  - title: Complex constructions in pseudocode
-    theory_id: 20922
-  - title: Fixed-size array
-    theory_id: 20078
-  - title: Dynamic array
-    theory_id: 5357
   - title: What is a bug
     theory_id: 5504
   - title: Processing strings
@@ -375,16 +375,16 @@ topics:
   4:
   - title: The concept of patterns
     theory_id: 3611
-  - title: Ordering and total order
-    theory_id: 9253
-  - title: Function composition
-    theory_id: 3580
   - title: "Hashing: overview"
     theory_id: 9831
   - title: Hash function
     theory_id: 10878
   - title: Hash table
     theory_id: 13054
+  - title: Ordering and total order
+    theory_id: 9253
+  - title: Function composition
+    theory_id: 3580
   - title: The Map interface
     theory_id: 3558
   - title: Comparator
@@ -410,8 +410,6 @@ topics:
   - title: Stream pipelines
     theory_id: 3612
   5:
-  - title: Recursion basics
-    theory_id: 5984
   - title: Decrease and conquer
     theory_id: 14669
   - title: Graph
@@ -430,6 +428,8 @@ topics:
     theory_id: 27203
   - title: Connectivity in graphs
     theory_id: 7956
+  - title: Recursion basics
+    theory_id: 5984
   - title: Tree
     theory_id: 5121
   - title: Depth-first search

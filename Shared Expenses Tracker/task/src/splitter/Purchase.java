@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.regex.*;
 
 import static java.util.regex.Pattern.compile;
-
+//большие сложные методы + дублирование кода
 public class Purchase {
 
     BigDecimal minimumAmount = new BigDecimal("0.01");
@@ -62,7 +62,6 @@ public class Purchase {
             BigDecimal> balanceAmount, Map<String, ArrayList<BalanceHistory>> balanceHistory) {
 
         BigDecimal remainder;
-        //List<String> names = Group.groupMap.get(groupName);
 
         BigDecimal quantityPerson = new BigDecimal(temporary.size());
         BigDecimal sharedAmount = totalPrice.divide(quantityPerson, RoundingMode.FLOOR);
@@ -94,9 +93,6 @@ public class Purchase {
                 balanceHistory.put(nameKeySort, balanceList);
             }
         }
-        //} else {
-        //System.out.println("Group doesn't exist");
-        //}
     }
 }
 

@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 
 public class BorrowRepay {
 
+    // длинный список аргументов, переместить списки в отдельные классы
     public void parceData(List<String> input, Map<String, BigDecimal> balanceAmount,
                           Map<String, ArrayList<BalanceHistory>> balanceHistory) {
         try {
@@ -28,7 +29,7 @@ public class BorrowRepay {
             System.out.println("Illegal command arguments");
         }
     }
-
+     // слишком много агругемнов в методе, изменить!!!
     private static void processTransaction(String type, BigDecimal amount, String nameKeySort, LocalDate date, String nameKey,
                                            Map<String, BigDecimal> balanceAmount, Map<String, ArrayList<BalanceHistory>> balanceHistory) {
 

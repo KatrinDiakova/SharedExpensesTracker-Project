@@ -3,11 +3,12 @@ package splitter;
 import java.util.*;
 import java.util.regex.*;
 
-
+// дублирование кода
 public class Group {
 
     static Map<String, List<String>> groupMap = new HashMap<>();
 
+    // длинный метод
     public void parceData(List<String> input) {
         runSafely(() -> {
             String command = input.get(1);

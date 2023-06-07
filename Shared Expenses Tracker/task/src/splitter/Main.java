@@ -11,7 +11,7 @@ public class Main {
         while (true) {
             String input = sc.nextLine();
             List<String> inputList = Arrays.asList(input.split(" "));
-            CommandParser.parseUserInput(inputList);
+            UserInputParser.parseUserInput(inputList);
         }
     }
 }
