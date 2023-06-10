@@ -1,3 +1,4 @@
 # Project exclude paths
 /.gradle/
 /Shared Expenses Tracker/task/build/
+/.idea/
