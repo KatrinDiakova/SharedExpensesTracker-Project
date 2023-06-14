@@ -1,4 +1,4 @@
-package splitter;
+package splitter.command;
 
 public enum Command {
     balance,

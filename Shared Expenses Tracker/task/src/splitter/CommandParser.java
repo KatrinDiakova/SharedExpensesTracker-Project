@@ -1,5 +1,9 @@
 package splitter;
 
+import splitter.command.BalanceProcessor;
+import splitter.command.Command;
+import splitter.command.CommandProcessor;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,27 +14,28 @@ import java.util.stream.Stream;
 public class CommandParser {
     private static final String INPUT_DELIMITER = " ";
 
-    private static final Balance balance = new Balance();
-    private static final BorrowRepay borrowRepay = new BorrowRepay();
-    private static final Group group = new Group();
-    private static final Purchase purchase = new Purchase();
-    private static final Map<String, BigDecimal> balanceAmount = new HashMap<>();
-    private static final Map<String, ArrayList<BalanceHistory>> balanceHistory = new HashMap<>();
+    private final BorrowRepay borrowRepay = new BorrowRepay();
+    private final Group group = new Group();
+    private final Purchase purchase = new Purchase();
+    private final Map<String, BigDecimal> balanceAmount = new HashMap<>();
+    private final Map<String, ArrayList<BalanceHistory>> balanceHistory = new HashMap<>();
+
+    private final Map<Command, CommandProcessor> processors = Map.of(
+            Command.group, group::parceData,
+            Command.help, (List<String> inputs) -> Stream.of(Command.values()).forEach(System.out::println),
+            Command.borrow, (List<String> inputs) -> borrowRepay.parceData(inputs, balanceAmount, balanceHistory),
+            Command.repay, (List<String> inputs) -> borrowRepay.parceData(inputs, balanceAmount, balanceHistory),
+            Command.balance, new BalanceProcessor(),
+            Command.purchase, (List<String> inputs) -> purchase.parceData(inputs, balanceAmount, balanceHistory)
+    );
 
     boolean parseUserInput(String input) {
         var command = Command.of(input);
-
-        var split = List.of(input.split(INPUT_DELIMITER));
-        switch (command) {
-            case exit -> {
-                return false;
-            }
-            case help -> Stream.of(Command.values()).forEach(System.out::println);
-            case group -> group.parceData(split);
-            case borrow, repay -> borrowRepay.parceData(split, balanceAmount, balanceHistory);
-            case balance -> balance.parceData(split, balanceAmount, balanceHistory);
-            case purchase -> purchase.parceData(split, balanceAmount, balanceHistory);
+        if (command == Command.exit) {
+            return false;
         }
+        var inputList = List.of(input.split(INPUT_DELIMITER));
+        processors.getOrDefault(command, (List<String> inputs) -> System.err.println()).process(inputList);
         return true;
     }
 }
