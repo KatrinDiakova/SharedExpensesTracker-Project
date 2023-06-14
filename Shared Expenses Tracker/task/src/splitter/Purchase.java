@@ -1,11 +1,11 @@
 package splitter;
 
-import java.math.*;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.*;
-import java.util.regex.*;
-
-import static java.util.regex.Pattern.compile;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Purchase {
 
@@ -99,6 +99,3 @@ public class Purchase {
         //}
     }
 }
-
-
-
